@@ -9,7 +9,7 @@ let schema = new Schema({
     foundation: { type: Date, required: true },
     population: { type: Number, required: true },
     likes: { type: Number, default: 0 }, 
-    itineraries: { type: [String], default: [] }, 
+   
 }, {
     timestamps: true
 });

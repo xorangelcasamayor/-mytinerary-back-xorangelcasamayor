@@ -1,11 +1,14 @@
-import { Router } from "express";
-import cityRouter from "./cities.js";        
 
+import { Router } from 'express';
+import cityRouter from './cities.js';
+import itineraryRouter from './itineraryRoutes.js'; 
 
-const router = Router(); 
+const router = Router();
 
 
 router.use('/cities', cityRouter);
 
 
-export default router; 
+router.use('/itineraries', itineraryRouter); 
+
+export default router;
