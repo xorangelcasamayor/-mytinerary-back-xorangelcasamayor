@@ -7,8 +7,10 @@ const itinerarySchema = new Schema({
   userPhoto: { type: String, required: true },
   price: { type: Number, min: 1, max: 5, required: true },
   duration: { type: Number, required: true },
-  hashtags: [{ type: String }], 
-  city: { type: Schema.Types.ObjectId, ref: "cities",required: true }, 
+  description: { type: String, required: true },
+  hashtags: [{ type: String }],
+  city: { type: Schema.Types.ObjectId, ref: "cities", required: true },
+  photo: { type: String, required: true },
 }, {
   timestamps: true 
 });

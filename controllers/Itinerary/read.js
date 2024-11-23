@@ -11,7 +11,7 @@ let getAllItineraries = async (req, res, next) => {
       query.city = city; 
     }
 
-    let itineraries = await Itinerary.find(query).populate('userName userPhoto price duration hashtags').exec()
+    let itineraries = await Itinerary.find(query).populate('city', 'country').exec()
     return res.status(200).json({
       response: itineraries
     });
@@ -55,3 +55,5 @@ let itineraryById = async (req, res, next) => {
 };
 
 export { getAllItineraries, getItinerariesByCity, itineraryById };
+
+
